@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">mvvm-with-clean</string>
+
+    <string name="register_title">Register screen</string>
+    <string name="register_button">Register</string>
+
+    <string name="hint_name">Enter your name</string>
+    <string name="hint_age">Enter your age</string>
+    <string name="hint_email">Enter your email</string>
+    <string name="hint_password">Enter your password</string>
+
+    <string name="presentation_age">%s years</string>
+
+    <string name="button_navigation_list">List</string>
+    <string name="button_navigation_register">Register</string>
+</resources>

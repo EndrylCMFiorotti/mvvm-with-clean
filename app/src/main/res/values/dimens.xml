@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="normal_margin">16dp</dimen>
+    <dimen name="large_margin">24dp</dimen>
+    <dimen name="largeX_margin">32dp</dimen>
+    <dimen name="largeXX_margin">40dp</dimen>
+    <dimen name="largeXXX_margin">48dp</dimen>
+    <dimen name="huge_margin">48dp</dimen>
+    <dimen name="hugeX_margin">56dp</dimen>
+    <dimen name="hugeXX_margin">64dp</dimen>
+
+    <dimen name="small_size">8sp</dimen>
+    <dimen name="normal_size">16sp</dimen>
+    <dimen name="large_size">24sp</dimen>
+    <dimen name="largeX_size">32sp</dimen>
+    <dimen name="largeXX_size">40sp</dimen>
+    <dimen name="largeXXX_size">48sp</dimen>
+    <dimen name="huge_size">48sp</dimen>
+    <dimen name="hugeX_size">56sp</dimen>
+    <dimen name="hugeXX_size">64sp</dimen>
+</resources>
