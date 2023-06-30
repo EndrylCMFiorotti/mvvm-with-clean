@@ -26,15 +26,21 @@ class UserListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setUpObservers()
+        setUpRequestApp()
+    }
+
+    private fun setUpRequestApp() {
         startLoading()
         viewModel.getUser()
-        setUpObservers()
+        refreshApp()
     }
 
     private fun setUpObservers() {
         with(viewModel) {
             userList.observe(viewLifecycleOwner) {
                 binding.rvUsers.adapter = UserListAdapter(it)
+                binding.swipeToRefresh.isRefreshing = false
                 stopLoading()
             }
             isEmpty.observe(viewLifecycleOwner) {
@@ -63,6 +69,12 @@ class UserListFragment : Fragment() {
                 isVisible = false
                 stopShimmer()
             }
+        }
+    }
+
+    private fun refreshApp() {
+        binding.swipeToRefresh.setOnRefreshListener {
+            viewModel.getUser()
         }
     }
 }
