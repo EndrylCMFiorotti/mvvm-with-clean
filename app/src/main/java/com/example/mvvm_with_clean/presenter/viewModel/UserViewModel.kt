@@ -6,9 +6,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.mvvm_with_clean.data.network.wrapper.ResultWrapper
 import com.example.mvvm_with_clean.data.repository.UserRepository
-import com.example.mvvm_with_clean.data.response.UserResponse
 import com.example.mvvm_with_clean.domain.presentation.UserPresentation
 import com.example.mvvm_with_clean.domain.user.UserDto
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class UserViewModel(private val repository: UserRepository) : ViewModel() {
@@ -25,12 +25,14 @@ class UserViewModel(private val repository: UserRepository) : ViewModel() {
     val isEmpty: LiveData<Unit> = _isEmpty
 
     fun getUser() {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             when (val response = repository.getUser()) {
                 is ResultWrapper.Success -> {
-                    when {
-                        response.content.isEmpty() -> _isEmpty.postValue(Unit)
-                        else -> _userList.postValue(response.content.map { it.toUserPresentation() })
+                    response.content.toUserListPresentation().let { list ->
+                        when {
+                            list.isEmpty() -> _isEmpty.postValue(Unit)
+                            else -> _userList.postValue(list)
+                        }
                     }
                 }
 
@@ -40,11 +42,15 @@ class UserViewModel(private val repository: UserRepository) : ViewModel() {
     }
 
     fun postUser(user: UserDto) {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             when (val response = repository.postUser(user)) {
-                is ResultWrapper.Success -> _register.postValue(Unit)
+                is ResultWrapper.Success -> response.content.let {
+                    _register.postValue(it)
+                }
 
-                is ResultWrapper.Error -> _error.postValue(response.error)
+                is ResultWrapper.Error -> response.error.let {
+                    _error.postValue(it)
+                }
             }
         }
     }

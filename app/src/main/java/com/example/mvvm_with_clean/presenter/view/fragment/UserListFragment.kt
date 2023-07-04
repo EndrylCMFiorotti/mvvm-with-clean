@@ -47,7 +47,7 @@ class UserListFragment : Fragment() {
                 Toast.makeText(requireContext(), "List is empty.", Toast.LENGTH_SHORT).show()
             }
             error.observe(viewLifecycleOwner) {
-                Toast.makeText(requireContext(), "There was an error.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "There was an error. ${it.message}", Toast.LENGTH_SHORT).show()
             }
         }
     }
