@@ -5,7 +5,7 @@ import com.example.mvvm_with_clean.data.repository.UserRepository
 import com.example.mvvm_with_clean.domain.user.UserDto
 import com.example.mvvm_with_clean.fixture.presentation.UserListPresentationFixture
 import com.example.mvvm_with_clean.fixture.response.UserListResponseFixture
-import com.example.mvvm_with_clean.presenter.util.CoroutineViewModelTest
+import com.example.mvvm_with_clean.util.CoroutineViewModelTest
 import getOrAwaitValue
 import io.mockk.coEvery
 import io.mockk.mockk
@@ -15,7 +15,6 @@ import org.junit.Before
 import org.junit.Test
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertInstanceOf
-
 
 @ExperimentalCoroutinesApi
 class UserViewModelTest : CoroutineViewModelTest() {

@@ -1,4 +1,4 @@
-package com.example.mvvm_with_clean.presenter.util
+package com.example.mvvm_with_clean.util
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import kotlinx.coroutines.CoroutineDispatcher
