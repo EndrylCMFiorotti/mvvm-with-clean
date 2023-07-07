@@ -43,6 +43,9 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.mediarouter:mediarouter:1.4.0'
 
+    def coil_version = "1.2.2"
+    implementation "io.coil-kt:coil:$coil_version"
+
     def nav_version = "2.6.0"
     api "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
     api "androidx.navigation:navigation-fragment-ktx:$nav_version"

@@ -19,4 +19,9 @@
     <dimen name="huge_size">48sp</dimen>
     <dimen name="hugeX_size">56sp</dimen>
     <dimen name="hugeXX_size">64sp</dimen>
+
+    <dimen name="small_corners">8dp</dimen>
+    <dimen name="normal_corners">16dp</dimen>
+    <dimen name="large_corners">24dp</dimen>
+    <dimen name="largeX_corners">32dp</dimen>
 </resources>

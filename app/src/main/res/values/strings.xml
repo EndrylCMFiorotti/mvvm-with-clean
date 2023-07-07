@@ -13,4 +13,6 @@
 
     <string name="button_navigation_list">List</string>
     <string name="button_navigation_register">Register</string>
+
+    <string name="bottom_sheet_image">user image</string>
 </resources>
