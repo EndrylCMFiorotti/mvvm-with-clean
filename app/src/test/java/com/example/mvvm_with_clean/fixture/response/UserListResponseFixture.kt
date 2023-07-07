@@ -9,6 +9,7 @@ class UserListResponseFixture(
     val email: String,
     val password: String,
     val age: Int,
+    val image: String,
     val emptyList: Boolean
 ) {
     companion object {
@@ -18,6 +19,7 @@ class UserListResponseFixture(
             withEmail: String = "endryl@gmail.com",
             withPassword: String = "12345678",
             withAge: Int = 20,
+            withImage: String = "image",
             withEmptyList: Boolean = false
         ): UserListResponseFixture {
             return UserListResponseFixture(
@@ -26,6 +28,7 @@ class UserListResponseFixture(
                 email = withEmail,
                 password = withPassword,
                 age = withAge,
+                image = withImage,
                 emptyList = withEmptyList
             )
         }
@@ -38,7 +41,8 @@ class UserListResponseFixture(
                 name = name,
                 age = age,
                 email = email,
-                password = password
+                password = password,
+                image = image
             )
         )
     )

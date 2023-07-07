@@ -24,6 +24,7 @@ class UserResponseExtTest : CoroutineViewModelTest() {
         assertEquals(result.userList.first().email, usersResponse.userList.first().email)
         assertEquals(result.userList.first().password, usersResponse.userList.first().password)
         assertEquals(result.userList.first().age, usersResponse.userList.first().age)
+        assertEquals(result.userList.first().image, usersResponse.userList.first().image)
     }
 
     companion object {
@@ -32,7 +33,8 @@ class UserResponseExtTest : CoroutineViewModelTest() {
             name = "endryl fiorotti",
             age = 20,
             email = "endryl@gmail.com",
-            password = "12345678"
+            password = "12345678",
+            image = "image"
         )
 
         private val usersResponse = UserListResponseFixture.getUserListComplete().build()
