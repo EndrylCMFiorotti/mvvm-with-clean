@@ -15,5 +15,6 @@ private fun UserData.toResponse() = UserResponse(
     name = name,
     age = age,
     email = email,
-    password = password
+    password = password,
+    image = image
 )

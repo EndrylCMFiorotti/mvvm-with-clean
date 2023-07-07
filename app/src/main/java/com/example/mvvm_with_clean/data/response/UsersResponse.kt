@@ -9,7 +9,8 @@ data class UsersResponse(
         UserPresentation(
             name = it.name,
             email = it.email,
-            age = it.age.toString()
+            age = it.age.toString(),
+            image = it.image
         )
     }
 }
