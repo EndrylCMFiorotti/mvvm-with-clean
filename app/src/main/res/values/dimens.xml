@@ -10,6 +10,16 @@
     <dimen name="hugeX_margin">56dp</dimen>
     <dimen name="hugeXX_margin">64dp</dimen>
 
+    <dimen name="small_padding">8dp</dimen>
+    <dimen name="normal_padding">16dp</dimen>
+    <dimen name="large_padding">24dp</dimen>
+    <dimen name="largeX_padding">32dp</dimen>
+    <dimen name="largeXX_padding">40dp</dimen>
+    <dimen name="largeXXX_padding">48dp</dimen>
+    <dimen name="huge_padding">48dp</dimen>
+    <dimen name="hugeX_padding">56dp</dimen>
+    <dimen name="hugeXX_padding">64dp</dimen>
+
     <dimen name="small_size">8sp</dimen>
     <dimen name="normal_size">16sp</dimen>
     <dimen name="large_size">24sp</dimen>
@@ -24,4 +34,5 @@
     <dimen name="normal_corners">16dp</dimen>
     <dimen name="large_corners">24dp</dimen>
     <dimen name="largeX_corners">32dp</dimen>
+    <dimen name="hugeXXX_corners">80dp</dimen>
 </resources>

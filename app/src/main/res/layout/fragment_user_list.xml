@@ -19,21 +19,21 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <include layout="@layout/placeholder_tem_list" />
+            <include layout="@layout/placeholder_item_list" />
 
-            <include layout="@layout/placeholder_tem_list" />
+            <include layout="@layout/placeholder_item_list" />
 
-            <include layout="@layout/placeholder_tem_list" />
+            <include layout="@layout/placeholder_item_list" />
 
-            <include layout="@layout/placeholder_tem_list" />
+            <include layout="@layout/placeholder_item_list" />
 
-            <include layout="@layout/placeholder_tem_list" />
+            <include layout="@layout/placeholder_item_list" />
 
-            <include layout="@layout/placeholder_tem_list" />
+            <include layout="@layout/placeholder_item_list" />
 
-            <include layout="@layout/placeholder_tem_list" />
+            <include layout="@layout/placeholder_item_list" />
 
-            <include layout="@layout/placeholder_tem_list" />
+            <include layout="@layout/placeholder_item_list" />
 
         </LinearLayout>
 

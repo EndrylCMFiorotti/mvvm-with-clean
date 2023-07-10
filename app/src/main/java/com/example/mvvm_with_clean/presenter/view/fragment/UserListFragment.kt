@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import coil.load
+import com.example.mvvm_with_clean.R
 import com.example.mvvm_with_clean.databinding.FragmentUserListBinding
 import com.example.mvvm_with_clean.domain.presentation.UserPresentation
 import com.example.mvvm_with_clean.presenter.adapter.UserListAdapter
@@ -57,16 +58,24 @@ class UserListFragment : Fragment() {
                 Toast.makeText(requireContext(), "List is empty.", Toast.LENGTH_SHORT).show()
             }
             error.observe(viewLifecycleOwner) {
-                Toast.makeText(requireContext(), "There was an error. ${it.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    requireContext(),
+                    "There was an error. ${it.message}",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
     }
 
     private fun recyclerViewConfig(list: List<UserPresentation>) {
-        binding.rvUsers.adapter = UserListAdapter(list) {
-            bottomSheetLayout(it)
+        val padding = resources.getDimensionPixelSize(R.dimen.largeXX_padding)
+        with(binding) {
+            rvUsers.adapter = UserListAdapter(list) {
+                swipeToRefresh.setPadding(0, 0, 0, padding)
+                bottomSheetLayout(it)
+            }
+            swipeToRefresh.isRefreshing = false
         }
-        binding.swipeToRefresh.isRefreshing = false
         stopLoading()
     }
 
