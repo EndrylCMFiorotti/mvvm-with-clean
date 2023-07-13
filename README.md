@@ -1,4 +1,4 @@
-# Foobar
+# Clean Architecture
 
 Project created to test and understand the folder structure of MVVM + Clean.
 
