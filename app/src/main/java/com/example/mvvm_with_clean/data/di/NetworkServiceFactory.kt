@@ -6,7 +6,7 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object RetrofitObject {
+class NetworkServiceFactory {
     inline fun <reified T> createNetworkService(): T {
         val log = LoggingInterceptor().getInterceptor()
         val client = OkHttpClient().newBuilder().addInterceptor(log)
