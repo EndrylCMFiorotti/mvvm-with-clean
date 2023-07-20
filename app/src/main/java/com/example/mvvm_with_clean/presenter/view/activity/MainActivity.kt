@@ -1,12 +1,9 @@
 package com.example.mvvm_with_clean.presenter.view.activity
 
-import android.graphics.Color
 import android.os.Bundle
-import android.view.View
-import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.example.mvvm_with_clean.R
 import com.example.mvvm_with_clean.databinding.ActivityMainBinding
 
@@ -18,23 +15,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        buttonClick()
-    }
-
-    private fun buttonClick() {
-        with(binding) {
-            ibtList.setOnClickListener {
-                configButton(it, R.id.action_to_userList, ibtRegister)
-            }
-            ibtRegister.setOnClickListener {
-                configButton(it, R.id.action_to_register, ibtList)
-            }
-        }
-    }
-
-    private fun configButton(it: View, action: Int, disable: ImageButton) {
-        findNavController(binding.fragment.id).navigate(action)
-        disable.setBackgroundColor(Color.TRANSPARENT)
-        it.background = ContextCompat.getDrawable(baseContext, R.drawable.bg_button)
+        binding.bottomNav.setupWithNavController((supportFragmentManager.findFragmentById(R.id.fragment) as NavHostFragment).navController)
     }
 }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/userListFragment"
+        android:icon="@drawable/baseline_list"
+        android:title="@string/button_navigation_list" />
+
+    <item
+        android:id="@+id/registerFragment"
+        android:icon="@drawable/baseline_add"
+        android:title="@string/button_navigation_register" />
+
+    <item
+        android:id="@+id/settingFragment"
+        android:icon="@drawable/baseline_settings"
+        android:title="@string/button_navigation_setting" />
+</menu>
