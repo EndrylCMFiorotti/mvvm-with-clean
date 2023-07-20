@@ -3,15 +3,15 @@
     <item
         android:id="@+id/userListFragment"
         android:icon="@drawable/baseline_list"
-        android:title="@string/button_navigation_list" />
+        android:title="" />
 
     <item
         android:id="@+id/registerFragment"
         android:icon="@drawable/baseline_add"
-        android:title="@string/button_navigation_register" />
+        android:title="" />
 
     <item
         android:id="@+id/settingFragment"
         android:icon="@drawable/baseline_settings"
-        android:title="@string/button_navigation_setting" />
+        android:title="" />
 </menu>
